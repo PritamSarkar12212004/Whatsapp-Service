@@ -1,0 +1,4 @@
+2025/09/05-21:41:41.939 312c Reusing MANIFEST C:\Users\Pritam\Desktop\whatsapp-service\.wwebjs_auth\session-whatsapp-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/09/05-21:41:41.940 312c Recovering log #233
+2025/09/05-21:41:41.943 312c Reusing old log C:\Users\Pritam\Desktop\whatsapp-service\.wwebjs_auth\session-whatsapp-client\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000233.log 
+2025/09/05-21:41:48.711 2a88 Manual compaction at level-0 from '\x00A\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00B\x00\x00\x00' @ 0 : 0; will stop at (end)
