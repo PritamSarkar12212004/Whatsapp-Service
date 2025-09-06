@@ -20,23 +20,29 @@ app.use(
   })
 );
 
+// routes
 app.use("/api/whatsapp", otpRoutes);
 
-//  connect mongo db
+// 404 fallback
+app.use((req, res) => {
+  res.status(404).json({ message: "Route Not Found" });
+});
+
+// connect mongo db
 connectDB()
   .then(() => {
-    // connect whatsappc Tool bots
+    // connect whatsapp Tool bots
     whatsappConnect()
       .then(() => {
         const port = process.env.PORT || 8080;
         app.listen(port, () => {
-          console.log(`server Start at Port  ${port}`);
+          console.log(`Server started at http://localhost:${port}`);
         });
       })
       .catch((err) => {
-        console.log(`Whatsapp Connection Failed Due to ` + err);
+        console.log(`Whatsapp Connection Failed: ` + err);
       });
   })
   .catch((err) => {
-    console.log(`DataBase Connection Faild Due to ` + err);
+    console.log(`Database Connection Failed: ` + err);
   });
